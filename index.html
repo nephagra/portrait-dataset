@@ -1,122 +1,165 @@
 <!DOCTYPE HTML>
-<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html lang="en">
+<head>
+	<style>
+		/* NAVIGATION BAR */
+		.navbar {
+			overflow: hidden; /* Hide overflow */
+			background-color: white; /* Dark background color */
+		}
+		.navbar a {
+			float: left; /* Make sure that the links stay side-by-side */
+			display: block; /* Change the display to block, for responsive reasons (see below) */
+			color: #1d2452; /* White text color */
+			text-align: center; /* Center the text */
+			padding: 15px 20px; /* Add some padding */
+			text-decoration: none; /* Remove underline */
+		}
+		.navbar a.right {
+			float: right; /* Float a link to the right */
+		}
+		.navbar a:hover {
+			background-color: #ddd; /* Grey background color */
+			color: black; /* Black text color */
+		}
 
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
-   <script lang="javascript" src="js/xlsx.full.min.js"></script>
-   <script type='text/javascript' src='js/source.js'></script>
+	</style>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
-  <title>Triplet-Data Labeling</title>
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> </script>
+		<script lang="javascript" src="js/xlsx.full.min.js"></script>
+		<script type='text/javascript' src='js/source.js'></script>
 
-  <meta name="author" content="Bernadette Bucher">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+	<div class="header" style="padding: 20px; text-align: center; background: #1d2452; color: white;">
+		<h1 style="font-size: 40px;">The Portrait Dataset</h1>
+		<p style="font-size: 20px;">UPenn GRASP Lab</p>
+	</div>
 
-  <link rel="stylesheet" type="text/css" href="stylesheet.css">
+	<div class="navbar">
+		<a href="#" class="right">CONTACT</a>
+		<a href="#" class="right">APPLICATIONS</a>
+		<a href="#" class="right">SEARCH</a>
+		<a href="#" class="right">DATA</a>
+	</div>
+
+ 	<meta name="author" content="Nephele Agrafiotis">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+ 	<link rel="stylesheet" type="text/css" href="stylesheet.css">
 </head>
 
-<body>
-  <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-    <tr style="padding:0px">
-      <td style="padding:0px">
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr style="padding:0px">
-            <td style="padding:2.5%;width:63%;vertical-align:middle">
-              <p style="text-align:center">
-                <name>Triplet Data Labeling</name>
-              </p>
-              <p style="text-align:center">
-                <a id="download_link" download="labels.json" href=”” >Download Progress</a>
-              </p>
-            </td>
-            <td style="padding:2.5%;width:25%;max-width:25%">
-              <papertitle>Anchor</papertitle>
-              <img id="anchor" src="images/0000000.jpeg"/>
-            </td>
-          </tr>
-        </tbody></table>
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+<body style="background-color: #e8fcff;">
+	<table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+		<tr style="padding:0px">
+			<td style="padding:0px">
+				<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+					<tr style="padding:0px">
+						<td style="padding:2.5%;width:63%;vertical-align:middle">
+							<p style="text-align:center">
+								<name>Triplet Data Labeling</name>
+							</p>
+							<p style="text-align:center">
+								<a id="download_link" download="labels.json" href=”” >Download Progress</a>
+							</p>
+						</td>
+						<td style="padding:2.5%;width:25%;max-width:25%">
+							<papertitle>Anchor</papertitle>
+							<img id="anchor" src="images/0000000.jpeg"/>
+						</td>
+					</tr>
+				</tbody></table>
+				<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-          <tr>
-            <td style="padding:2.5%;width:35%;max-width:35%;">
-              <img id="image1" src="images/0005283.jpeg"/>
+					<tr>
+						<td style="padding:2.5%;width:35%;max-width:35%;">
+							<img id="image1" src="images/0005283.jpeg"/>
 
-            </td>
+						</td>
 
-            <td style="padding:2.5%;width:35%;max-width:35%;">
-              <img id="image2" src="images/0001242.jpeg"/>
+						<td style="padding:2.5%;width:35%;max-width:35%;">
+							<img id="image2" src="images/0001242.jpeg"/>
 
-            </td>
+						</td>
 
-            <td style="padding:2.5%;width:15%;max-width:15%;">
-              <img id="back" src="http://www.clker.com/cliparts/2/v/Z/A/g/2/back-button-hi.png" width='100'/>
+						<td style="padding:2.5%;width:15%;max-width:15%;">
+							<img id="back" src="http://www.clker.com/cliparts/2/v/Z/A/g/2/back-button-hi.png" width='100'/>
 
-            </td>
+						</td>
 
-            <td style="padding:2.5%;width:15%;max-width:15%;">
-              <img id="next" src="https://simg.nicepng.com/png/small/8-88894_next-button-png-image-transparent-next-button.png" width='100'/>
+						<td style="padding:2.5%;width:15%;max-width:15%;">
+							<img id="next" src="https://simg.nicepng.com/png/small/8-88894_next-button-png-image-transparent-next-button.png" width='100'/>
 
-            </td>
-          </tr>
-        </tbody></table>
+						</td>
+					</tr>
+				</tbody></table>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+				<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
-          <tr>
-            <td style="padding:2.5%;width:40%;max-width:40%;">
-              <img id="check1" src="https://listimg.pinclipart.com/picdir/s/176-1766362_red-x-cross-gif-clipart.png" width='50'/>
+					<tr>
+						<td style="padding:2.5%;width:40%;max-width:40%;">
+							<img id="check1" src="https://listimg.pinclipart.com/picdir/s/176-1766362_red-x-cross-gif-clipart.png" width='50'/>
 
-            </td>
+						</td>
 
-            <td style="padding:2.5%;width:40%;max-width:40%;">
-              <img id="check2" src="https://listimg.pinclipart.com/picdir/s/176-1766362_red-x-cross-gif-clipart.png" width='50'/>
+						<td style="padding:2.5%;width:40%;max-width:40%;">
+							<img id="check2" src="https://listimg.pinclipart.com/picdir/s/176-1766362_red-x-cross-gif-clipart.png" width='50'/>
 
-            </td>
+						</td>
 
-            <td style="padding:2.5%;width:20%;max-width:20%;">
-              <img id="clear" src="https://images.twinkl.co.uk/tr/image/upload/illustation/Bee-Bot-Clear-Button--PlanIt-Design-and-Technology-KS2.png" width='120'/>
+						<td style="padding:2.5%;width:20%;max-width:20%;">
+							<img id="clear" src="https://images.twinkl.co.uk/tr/image/upload/illustation/Bee-Bot-Clear-Button--PlanIt-Design-and-Technology-KS2.png" width='120'/>
 
-            </td>
-          </tr>
-        </tbody></table>
+						</td>
+					</tr>
+				</tbody></table>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <td style="padding:2.5%;width:70%;max-width:70%;">
-                <papertitle>Comments</papertitle>
-                <p>
-                  <textarea id = "myTextArea"
-                          rows = "3"
-                          cols = "70" placeholder="Notes about this triplet"></textarea>
-                </p>
-            </td>
+				<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+					<tr>
+						<td style="padding:2.5%;width:70%;max-width:70%;">
+								<papertitle>Comments</papertitle>
+								<p>
+									<textarea id = "myTextArea"
+													rows = "3"
+													cols = "70" placeholder="Notes about this triplet"></textarea>
+								</p>
+						</td>
 
-            <td style="padding:2.5%;width:15%;max-width:15%;">
-                <papertitle>Iteration</papertitle>
-                <p>
-                  <textarea id = "iter" rows = "1" cols = "10"></textarea>
-                </p>
-            </td>
+						<td style="padding:2.5%;width:15%;max-width:15%;">
+								<papertitle>Iteration</papertitle>
+								<p>
+									<textarea id = "iter" rows = "1" cols = "10"></textarea>
+								</p>
+						</td>
 
-            <td style="padding:2.5%;width:15%;max-width:15%;">
-                <p>
-                  <button id="go">GO</button>
-                </p>
-            </td>
-          </tr>
-        </tbody></table>
+						<td style="padding:2.5%;width:15%;max-width:15%;">
+								<p>
+									<button id="go">GO</button>
+								</p>
+						</td>
+					</tr>
+				</tbody></table>
 
-        <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-          <tr>
-            <td style="padding:2.5%;width:20%;max-width:20%;">
-              <input type="file" id="inputfile" value="Import" /><br />
-            </td>
-            <td style="padding:2.5%;width:80%;max-width:80%;">
-              <button id="import">Import</button>
-            </td>
-          </tr>
-        </tbody></table>
-      </td>
-    </tr>
-  </table>
+				<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+					<tr>
+						<td style="padding:2.5%;width:20%;max-width:20%;">
+							<input type="file" id="inputfile" value="Import" /><br />
+						</td>
+						<td style="padding:2.5%;width:80%;max-width:80%;">
+							<button id="import">Import</button>
+						</td>
+					</tr>
+				</tbody></table>
+			</td>
+		</tr>
+	</table>
 </body>
+
+<div class="footer" style="padding: 10px; text-align: right; background: #1d2452;">
+ 	<p style="color: white; font-size: 20px; margin: 2px;"> Contact </p>
+ 	<p style="color: white; font-size: 15px; margin: 2px;"> Name </p>
+ 	<p style="color: white; font-size: 15px; margin: 2px;"> Email@seas.upenn.edu </p>
+ 	<p style="color: white; font-size: 15px; margin: 2px;"> Blah blah blah </p>
+ 	<p style="color: white; font-size: 15px; margin: 2px;"> Some other stuff </p>
+</div> 
 
 </html>
