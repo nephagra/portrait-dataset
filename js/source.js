@@ -1,38 +1,8 @@
 $(document).ready(function(){
-  var metadata = $.getJSON("triplets.json");
+  var metadata = $.getJSON("portraits.json");
   console.log(metadata);
   var i = 0
-
-    document.getElementById('import').onclick = function() {
-        readFile(document.getElementById('inputfile').files[0], function(e) {
-            var temp = e.target.result;
-            metadata.responseJSON = JSON.parse(temp);
-            
-            $('#anchor').attr('src','images/' + metadata.responseJSON[i]['anchor']);
-            $('#image1').attr('src','images/' + metadata.responseJSON[i]['1']);
-            $('#image2').attr('src','images/' + metadata.responseJSON[i]['2']);
-
-            if(metadata.responseJSON[i]['Positive'] == '1'){
-                $('#check1').attr('src','https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/white-heavy-check-mark.png');
-            } else {
-                $('#check1').attr('src','https://listimg.pinclipart.com/picdir/s/176-1766362_red-x-cross-gif-clipart.png');
-            }
-            if(metadata.responseJSON[i]['Positive'] == '2'){
-                $('#check2').attr('src','https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/white-heavy-check-mark.png');
-            } else {
-                $('#check2').attr('src','https://listimg.pinclipart.com/picdir/s/176-1766362_red-x-cross-gif-clipart.png');
-            }
-
-            $('#myTextArea').val(metadata.responseJSON[i]['Notes']);
-        });
-    }
-
-    function readFile(file, onLoadCallback){
-        var reader = new FileReader();
-        reader.onload = onLoadCallback;
-        reader.readAsBinaryString(file);
-    }
-
+    
     $('#image1').on({
         'click': function(){
             $('#check1').attr('src','https://s3.amazonaws.com/pix.iemoji.com/images/emoji/apple/ios-12/256/white-heavy-check-mark.png');
