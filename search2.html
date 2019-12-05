@@ -56,23 +56,90 @@
 <body style="background-color: white;">
 	<div class="row" style="display: flex; flex-wrap: wrap; background-color: white; padding: 50px;">
 		<div style="flex: 10%; padding-top: 15px; padding-bottom: 15px;">
-			<label for="datasearch" style="font-size: 20px;">Search Dataset</label>
+			<label for="titlesearch" style="font-size: 20px;">Search Title</label>
 			<br>
-			<input id="datasearch" type="text" placeholder="Search...">
-			<br>
-			<br>
-			<label for="fname" style="font-size: 20px;">Select Date Range</label>
-			<br>
-
+			<input id="titlesearch" type="text" placeholder="Search...">
 			<br>
 			<br>
-			<label for="fname" style="font-size: 20px;">Filter Artists</label>
+			<label for="artistsearch" style="font-size: 20px;">Search Artist</label>
 			<br>
-
+			<input id="artistsearch" type="text" placeholder="Search...">
 			<br>
 			<br>
-			<label for="fname" style="font-size: 20px;">Filter Movements</label>
+			<label style="font-size: 20px;">Select Date Range</label> 
 			<br>
+			<label id="startyear" style="font-size: 15px;">Start Year - 1400</label> 
+			<br>
+			<input type="range" class="custom-range" min="1400" max="2019" id="YearRange1" style="width: 80%" value="1400"/>
+			<br>
+			<label id="endyear" style="font-size: 15px;">End Year - 2019</label>
+			<br>
+			<input type="range" class="custom-range" min="1400" max="2019" id="YearRange2" style="width: 80%" value="2019"/>
+			<br>
+			<label id="searcherror" style="font-size: 15px;"> </label>
+			<br>
+			<label style="font-size: 20px;">Filter Movements</label>
+			<br>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios1" value="option1">
+				<label class="form-check-label" for="exampleRadios1">
+					Medieval
+				</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios2" value="option2">
+				<label class="form-check-label" for="exampleRadios2">
+					Early Renaissance
+				</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios3" value="option3">
+				<label class="form-check-label" for="exampleRadios3">
+					Middle Renaissance
+				</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios4" value="option4">
+				<label class="form-check-label" for="exampleRadios4">
+					Late Renaissance
+				</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios5" value="option5">
+				<label class="form-check-label" for="exampleRadios5">
+					Baroque
+				</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios6" value="option6">
+				<label class="form-check-label" for="exampleRadios6">
+					Neoclassicism
+				</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios7" value="option7">
+				<label class="form-check-label" for="exampleRadios7">
+					Realism
+				</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios8" value="option8">
+				<label class="form-check-label" for="exampleRadios8">
+					Impressionism
+				</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios9" value="option9">
+				<label class="form-check-label" for="exampleRadios9">
+					Modernism
+				</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios10" value="option10">
+				<label class="form-check-label" for="exampleRadios10">
+					Post-Modernism
+				</label>
+			</div>
 
 		</div>
 
