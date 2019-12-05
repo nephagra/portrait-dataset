@@ -61,39 +61,35 @@
 			</p>
 		</div>
 		<div class="col-md-9">
-			<div id="doomvae_sketch" class="unselectable">
+			<div id="reconstruction" class="unselectable">
 				<div class="row">
-					<div class="col-md-2">Screenshot Image</div>
-					<div class="col-md-3">
-						<button> Load Random Screenshot </button>
-					</div>
+					<div class="col-md-2">Portrait Image</div>
+					<div class="col-md-3"> <button id="loadportrait" type="button"> Load Next Portrait </button> </div>
 					<div class="col-md-2" style="text-align: center;">Z</div>
 					<div class="col-md-2">Reconstruction</div>
-					<div class="col-md-3">
-						<button> Randomize Z </button>
-					</div>
+					<div class="col-md-3"> <button id="randomz" type="button"> Randomize Z </button> </div>
 				</div>
 				<br>
 				<div class="row">
 					<div class="col-md-5">
-						IMAGE GOES HERE
+						<img id="reconin" src="Images/0000000.jpeg" style="max-width: 80%; max-height: 200px">
 					</div>
 					<div class="col-md-2" style="text-align: center;">
-						<input type="range" min="-250" max="250" style="width: 100px;"/> <br>
-						<input type="range" min="-250" max="250" style="width: 100px;"/> <br>
-						<input type="range" min="-250" max="250" style="width: 100px;"/> <br>
-						<input type="range" min="-250" max="250" style="width: 100px;"/> <br>
-						<input type="range" min="-250" max="250" style="width: 100px;"/> <br>
-						<input type="range" min="-250" max="250" style="width: 100px;"/> <br>
-						<input type="range" min="-250" max="250" style="width: 100px;"/> <br>
-						<input type="range" min="-250" max="250" style="width: 100px;"/> <br>
-						<input type="range" min="-250" max="250" style="width: 100px;"/> <br>
-						<input type="range" min="-250" max="250" style="width: 100px;"/> <br>
-						<input type="range" min="-250" max="250" style="width: 100px;"/> <br>
-						<input type="range" min="-250" max="250" style="width: 100px;"/> <br>
-						<input type="range" min="-250" max="250" style="width: 100px;"/> <br>
-						<input type="range" min="-250" max="250" style="width: 100px;"/> <br>
-						<input type="range" min="-250" max="250" style="width: 100px;"/>
+						<input id="z1" type="range" min="0" max="1" step="0.1" style="width: 100px;"/> <br>
+						<input id="z2" type="range" min="0" max="1" step="0.1" style="width: 100px;"/> <br>
+						<input id="z3" type="range" min="0" max="1" step="0.1" style="width: 100px;"/> <br>
+						<input id="z4" type="range" min="0" max="1" step="0.1" style="width: 100px;"/> <br>
+						<input id="z5" type="range" min="0" max="1" step="0.1" style="width: 100px;"/> <br>
+						<input id="z6" type="range" min="0" max="1" step="0.1" style="width: 100px;"/> <br>
+						<input id="z7" type="range" min="0" max="1" step="0.1" style="width: 100px;"/> <br>
+						<input id="z8" type="range" min="0" max="1" step="0.1" style="width: 100px;"/> <br>
+						<input id="z9" type="range" min="0" max="1" step="0.1" style="width: 100px;"/> <br>
+						<input id="z10" type="range" min="0" max="1" step="0.1" style="width: 100px;"/> <br>
+						<input id="z11" type="range" min="0" max="1" step="0.1" style="width: 100px;"/> <br>
+						<input id="z12" type="range" min="0" max="1" step="0.1" style="width: 100px;"/> <br>
+						<input id="z13" type="range" min="0" max="1" step="0.1" style="width: 100px;"/> <br>
+						<input id="z14" type="range" min="0" max="1" step="0.1" style="width: 100px;"/> <br>
+						<input id="z15" type="range" min="0" max="1" step="0.1" style="width: 100px;"/> <br>
 					</div>
 					<div class="col-md-5">
 						RECONSTRUCTION GOES HERE
