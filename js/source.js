@@ -1,7 +1,7 @@
 $(document).ready(function(){
   var metadata = $.getJSON("portraits.json");
   console.log(metadata);
-  var i = 0
+  var i = 0;
     
 
     $(function () {
@@ -9,9 +9,9 @@ $(document).ready(function(){
         $('#YearRange1').on('input change', function () {
             $('#startyear').text("Start Year - " + $(this).val());
             if($('#YearRange1').val() > $('#YearRange2').val()){
-                $('#searcherror').text("ERROR: Start Year greather than End Year.")
+                $('#searcherror').text("ERROR: Start Year greather than End Year.");
             }else{
-                $('#searcherror').text("")
+                $('#searcherror').text("");
             }
         });
     });
@@ -20,11 +20,18 @@ $(document).ready(function(){
         $('#YearRange2').on('input change', function () {
             $('#endyear').text("End Year - " + $(this).val());
             if($('#YearRange1').val() > $('#YearRange2').val()){
-                $('#searcherror').text("ERROR: Start Year greather than End Year.")
+                $('#searcherror').text("ERROR: Start Year greather than End Year.");
             }else{
-                $('#searcherror').text("")
+                $('#searcherror').text("");
             }
         });
     });
+
+    $('#m1').on({
+        'click': function(){
+            window.location = 'search2.html';
+            // $('#exampleRadios1').attr("checked", true);
+        }
+    })
 
 });
