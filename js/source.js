@@ -1,8 +1,7 @@
 $(document).ready(function(){
-  var metadata = $.getJSON("portraits.json");
+  var metadata = $.getJSON("js/portraits.json");
   console.log(metadata);
   var i = 0;
-    
 
     $(function () {
         // setup an event handler to set the text when the range value is dragged (see event for input) or changed (see event for change)
