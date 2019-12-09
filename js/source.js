@@ -33,6 +33,7 @@ $(document).ready(function(){
         }
     })
 
+
     
     $('#randomz').on({
         'click': function(){
@@ -62,3 +63,11 @@ $(document).ready(function(){
     })
 
 });
+
+function loadPortraitImg(timePeriod) {
+  var timePerodsJSON = $.getJSON("js/time_periods.json");
+  var timePeriodFiles = timePerodsJSON[timePeriod]
+  return timePeriodFiles[Math.floor(Math.random() * timePeriodFiles.length)]
+}
+
+
