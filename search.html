@@ -40,11 +40,11 @@
 
 		<div class="collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
 			<div class="navbar-nav" style="font-size: 20px;">
-				<a class="nav-item nav-link" href="index2.html">Home </a>
-				<a class="nav-item nav-link" href="data2.html">Data </a>
-				<a class="nav-item nav-link" href="search2.html">Search </a>
-				<a class="nav-item nav-link" href="app2.html">Applications </a>
-				<a class="nav-item nav-link active" href="contact2.html">Contact <span class="sr-only">(current)</span></a>
+				<a class="nav-item nav-link" href="index.html">Home </a>
+				<a class="nav-item nav-link" href="data.html">Data </a>
+				<a class="nav-item nav-link active" href="search.html">Search <span class="sr-only">(current)</span></a>
+				<a class="nav-item nav-link" href="app.html">Applications </a>
+				<a class="nav-item nav-link" href="contact.html">Contact</a>
 			</div>
 		</div>
 	</nav>
@@ -53,60 +53,98 @@
  	<meta name="viewport" content="width=device-width, initial-scale=1">
 </head>
 
-
 <body style="background-color: white;">
 	<div class="row" style="display: flex; flex-wrap: wrap; background-color: white; padding: 50px;">
-		<div class="col-md-3" style="writing-mode: vertical-rl; padding-top: 15px; padding-bottom: 15px;">
-			<p style="writing-mode: sideways-lr; padding-right: 50px; font-size: 40px; color: #1d2452; text-align: center; letter-spacing: 0.15em;"> 
-				<i>CONTACT INFORMATION</i>
-			</p>
+		<div style="flex: 10%; padding-top: 15px; padding-bottom: 15px;">
+			<label for="titlesearch" style="font-size: 20px;">Search Title</label>
+			<br>
+			<input id="titlesearch" type="text" placeholder="Search...">
+			<br>
+			<br>
+			<label for="artistsearch" style="font-size: 20px;">Search Artist</label>
+			<br>
+			<input id="artistsearch" type="text" placeholder="Search...">
+			<br>
+			<br>
+			<label style="font-size: 20px;">Select Date Range</label> 
+			<br>
+			<label id="startyear" style="font-size: 15px;">Start Year - 1400</label> 
+			<br>
+			<input type="range" class="custom-range" min="1400" max="2019" id="YearRange1" style="width: 80%" value="1400"/>
+			<br>
+			<label id="endyear" style="font-size: 15px;">End Year - 2019</label>
+			<br>
+			<input type="range" class="custom-range" min="1400" max="2019" id="YearRange2" style="width: 80%" value="2019"/>
+			<br>
+			<label id="searcherror" style="font-size: 15px;"> </label>
+			<br>
+			<label style="font-size: 20px;">Filter Movements</label>
+			<br>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios1" value="option1">
+				<label class="form-check-label" for="exampleRadios1">
+					Medieval
+				</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios2" value="option2">
+				<label class="form-check-label" for="exampleRadios2">
+					Early Renaissance
+				</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios3" value="option3">
+				<label class="form-check-label" for="exampleRadios3">
+					Middle Renaissance
+				</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios4" value="option4">
+				<label class="form-check-label" for="exampleRadios4">
+					Late Renaissance
+				</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios5" value="option5">
+				<label class="form-check-label" for="exampleRadios5">
+					Baroque
+				</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios6" value="option6">
+				<label class="form-check-label" for="exampleRadios6">
+					Neoclassicism
+				</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios7" value="option7">
+				<label class="form-check-label" for="exampleRadios7">
+					Realism
+				</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios8" value="option8">
+				<label class="form-check-label" for="exampleRadios8">
+					Impressionism
+				</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios9" value="option9">
+				<label class="form-check-label" for="exampleRadios9">
+					Modernism
+				</label>
+			</div>
+			<div class="form-check">
+				<input class="form-check-input" type="checkbox" name="exampleRadios" id="exampleRadios10" value="option10">
+				<label class="form-check-label" for="exampleRadios10">
+					Post-Modernism
+				</label>
+			</div>
+
 		</div>
-		<div class="col-md-7" style="font-size: 20px;">
-			If you would like to report any errors in the Portrait Dataset or would like to contribute to the Portrait Dataset, please conact us at:
-			<br>
-			<br>
-			TBD_EMAIL@seas.upenn.edu
-			<br>
-			NAME OF PERSON
-			<br>
-			University of Pennsylvania GRASP Lab
-			<br>
-			<br>
-			or fill out the contact form below:
-			<br>
-			<br>
-			<div class="container-fluid">
-				<form > 
 
-					<label for="fname">First Name</label>
-					<br>
-					<input type="text" id="fname" name="firstname" placeholder="Your first name...">
-					<br>
-					<br>
-					<label for="lname">Last Name</label>
-					<br>
-					<input type="text" id="lname" name="lastname" placeholder="Your last name...">
-					<br>
-					<br>
-					<label for="reason">Reason for Contact</label>
-					<br>
-					<select id="reason" name="reason">
-						<option value="correction"> Correction </option>
-						<option value="contribution"> Contribution </option>
-						<option value="other"> Other </option>
-					</select>
-					<br>
-					<br>
-					<label for="message"> Message </label>
-					<br>
-					<textarea id="message" name="message" placeholder="Your message..." style="height:100px; width:600px;"></textarea>
-					<br>
-					<br>
-					<input type="submit" value="Submit">
-
-				</form>
-			</div> 
-
+		<div style="flex: 70%;">
+			hello
 		</div>
 	</div>
 
