@@ -28,8 +28,8 @@ $(document).ready(function(){
 
     $('#m1').on({
         'click': function(){
-            window.location = 'search2.html';
-            // $('#exampleRadios1').attr("checked", true);
+            window.location = 'search.html';
+            $('#exampleRadios1').attr("checked", true);
         }
     })
 
